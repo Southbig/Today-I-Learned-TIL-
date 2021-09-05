@@ -14,6 +14,7 @@
 4. callback(코드연습)
 5. promise(코드연습)
 6. callback-to-promise(코드연습)
+7. async, await
 
 ## 자료구조
 1. Stack
