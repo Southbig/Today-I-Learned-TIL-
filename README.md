@@ -7,7 +7,7 @@
 4. Class Component VS function Component
 5. State, Props
 ### React 공식문서 정리
-00.React 공식문서
+0. React 공식문서
 1. JSX 소개
 2. 엘리먼트 랜더링
 3. Components와 Props
