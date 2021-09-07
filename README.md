@@ -6,6 +6,11 @@
 3. React 숨겨진 tool
 4. Class Component VS function Component
 5. State, Props
+### React 공식문서 정리
+0. React 공식문서
+1. JSX 소개
+2. 엘리먼트 랜더링
+3. Components와 Props
 
 ## JavaScript
 1. 객체지향
