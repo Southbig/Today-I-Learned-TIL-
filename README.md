@@ -30,4 +30,4 @@
 5. Binary Search Tree
 
 ## Web Server 기초
-1. HTTP 트랜잭션 해부()
+1. HTTP 트랜잭션 해부(공식문서)
