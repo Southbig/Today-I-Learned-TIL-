@@ -21,6 +21,7 @@
 5. promise(코드연습)
 6. callback-to-promise(코드연습)
 7. async, await
+8. 스코프와 클로저(정리중)
 
 ## 자료구조
 1. Stack
@@ -31,3 +32,5 @@
 
 ## Web Server 기초
 1. HTTP 트랜잭션 해부(공식문서)
+2. CORS(정리중)
+3. Node.js Express(정리중)
