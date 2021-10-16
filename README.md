@@ -39,3 +39,10 @@
 1.PostCSS
 
 ## 알고리즘
+
+## reduce
+
+## Node.js
+
+## MySQL
+
