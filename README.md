@@ -36,13 +36,15 @@
 3. Node.js Express(정리중)
 
 ## CSS
-1.PostCSS
+1. PostCSS
 
 ## 알고리즘
 
 ## reduce
 
 ## Node.js
+1. npm 모듈
 
 ## MySQL
+1. Batch Mode
 
