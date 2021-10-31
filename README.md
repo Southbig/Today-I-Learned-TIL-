@@ -30,6 +30,13 @@
 4. Graph
 5. Binary Search Tree
 
+### 복습
+
+### 시간복잡도
+1. Big-O(빅오)표기법.md
+2. 동적할당, 동적계획법
+
+
 ## Web Server 기초
 1. HTTP 트랜잭션 해부(공식문서)
 2. CORS(정리중)
