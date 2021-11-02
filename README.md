@@ -54,6 +54,7 @@
 - morgan
 - dotenv
 - mysql
+2. Node.js 웹 앱의 도커라이징(컨테이너화)
 
 ## MySQL
 1. Batch Mode
