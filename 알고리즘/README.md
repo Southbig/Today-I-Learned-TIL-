@@ -40,3 +40,6 @@ const box = getBoxNum(row, col);
 
 21. inequalityNumber
     재귀 다시 이해 하기
+
+22. spiralTraversal
+    다시이해
