@@ -22,6 +22,8 @@
 6. callback-to-promise(코드연습)
 7. async, await
 8. 스코프와 클로저(정리중)
+### 모던 자바스크립트 (Deep Dive)
+1. 프로그래밍
 
 ## 자료구조
 1. Stack
