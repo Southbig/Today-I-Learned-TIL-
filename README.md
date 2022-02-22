@@ -49,7 +49,7 @@
 
 ## 알고리즘
 
-## reduce
+## redux
 
 ## Node.js
 1. npm 모듈
