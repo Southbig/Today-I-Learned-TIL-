@@ -62,6 +62,11 @@ document.querySelector("div").addEventListener("click", () => {
 5. Layout을 통해 뷰포트 기준으로 렌더트리 노드들의 각 크기/위치 계산
 6. Paint를 통해 Layout에서 계산한 값들로 각 요소를 화면에 그림
 
+> **추가정리**
+> 웹킷(Webkit)
+> 게코(Gecko
+> CRP(Critical Rendering Path)
+
 ## 참고
 
 - [HTML Critical rendering path의 이해](https://blog.asamaru.net/2017/05/04/understanding-the-critical-rendering-path/)
