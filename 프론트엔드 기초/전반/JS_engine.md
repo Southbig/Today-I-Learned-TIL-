@@ -16,3 +16,7 @@
 > 인터프리터(Interpreter)
 > 바이트코드(Bytecode)
 > 프로파일링 데이터(Profiling data)
+
+## 참고
+
+- [JavaScript 엔진 톺아보기](https://velog.io/@godori/JavaScript-engine-1)
