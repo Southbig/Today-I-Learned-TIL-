@@ -1,4 +1,4 @@
-class {
+class Stack {
     constructor() {
         this.storage = {};
         this.top = 0;
@@ -8,7 +8,7 @@ class {
     }
 
     push(element) {
-        this.storage[element] = element;
+        this.storage[this.top] = element;
         this.top++
     }
     pop() {
