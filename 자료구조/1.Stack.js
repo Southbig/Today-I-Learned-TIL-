@@ -16,7 +16,7 @@ class Stack {
             return;
         }
         const result = this.storage[this.top - 1];
-        delete this.storate[this.top - 1];
+        delete this.storage[this.top - 1];
         this.top--
 
         return result
