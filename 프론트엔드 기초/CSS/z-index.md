@@ -54,3 +54,8 @@ z-index 값을 설정할 수 없는 요소라면 마크업 순서로 결정한�
 ```
 
 <img src="https://github.com/baeharam/Must-Know-About-Frontend/raw/main/images/css/z-index%20stacking%20order.png">
+
+- div1과 div2, div3는 같은 레벨에 있으므로 z-index에 따라 쌓이기 때문에 div2 > div3 > div1 순으로 쌓인다
+- div4와 div5, div6은 div3안에 있으므로 그 안에서 z-index에 따라 쌓인다
+- 즉, div3 안의 요소들의 z-index가 div1,div2 보다 커도 영향을 주지 않는다
+- 결론적으로, div5 > div6 > div4 순으로 쌓인다
