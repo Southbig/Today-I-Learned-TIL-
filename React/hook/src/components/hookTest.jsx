@@ -1,10 +1,14 @@
 import React from "react";
 import useInput from "../hook/useInput";
 import useTab from "../hook/useTab";
+import useTitle from "../hook/useTitle";
 
 const HookTest = () => {
   const maxLen = (value) => value.length <= 10;
   const name = useInput("taesik", maxLen);
+  const title = useTitle("loading...");
+
+  setTimeout(() => title("hallo"), 2000);
 
   const content = [
     {
