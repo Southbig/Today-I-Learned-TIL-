@@ -92,3 +92,20 @@ addEventListner를 통해 이벤트를 등록하고 난 뒤 이벤트 등록을 
 즉, 컴포넌트가 언마운트 될 때 꼭 이벤트 등록을 해제해주어야 한다
 
 > component가 mount 되지 않았을때 eventListener가 배치되지 않게하기 위하여,
+
+### usePreventLeave
+
+#### beforeunload 이벤트 사용방법
+
+1. preventDefault()를 호출해야 한다
+
+2. returnValue 속성에 문자열 할당
+
+```
+window.addEventListener('beforeunload', (event) => {
+  // 표준에 따라 기본 동작 방지
+  event.preventDefault();
+  // Chrome에서는 returnValue 설정이 필요함
+  event.returnValue = '';
+});
+```
