@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useRef } from "react";
 import useInput from "../hook/useInput";
 import useTab from "../hook/useTab";
 import useTitle from "../hook/useTitle";
+import useClick from "../hook/useClick";
 
 const HookTest = () => {
   const maxLen = (value) => value.length <= 10;
@@ -23,6 +24,9 @@ const HookTest = () => {
 
   const { curruntItem, changeItem } = useTab(0, content);
 
+  const yo = useRef();
+  const sayHello = () => console.log("hello ?");
+  const text = useClick(sayHello);
   return (
     <div>
       <h3>hook test</h3>
@@ -32,6 +36,8 @@ const HookTest = () => {
         <button onClick={() => changeItem(idx)}>{section.tab}</button>
       ))}
       <div>{curruntItem.content}</div>
+      <input type="text" placeholder="yo" ref={yo} />
+      <h1 ref={text}>클릭 이벤트</h1>
     </div>
   );
 };
