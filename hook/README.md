@@ -84,3 +84,28 @@ setState는 비동기로 동작한다.
 그 후에 큐의 각 함수를 호출하여 함수형 setState의 이전 상태를 전달하여 상태를 업데이트 하는 것이다
 
 ## useEffect
+
+### addEventListner
+
+addEventListner를 통해 이벤트를 등록하고 난 뒤 이벤트 등록을 해제해주지 않으면, 특정 이벤트에서 계속해서 이벤트를 감지하기 때문에 성능 저하를 일으킬 수 있다
+
+즉, 컴포넌트가 언마운트 될 때 꼭 이벤트 등록을 해제해주어야 한다
+
+> component가 mount 되지 않았을때 eventListener가 배치되지 않게하기 위하여,
+
+### usePreventLeave
+
+#### beforeunload 이벤트 사용방법
+
+1. preventDefault()를 호출해야 한다
+
+2. returnValue 속성에 문자열 할당
+
+```
+window.addEventListener('beforeunload', (event) => {
+  // 표준에 따라 기본 동작 방지
+  event.preventDefault();
+  // Chrome에서는 returnValue 설정이 필요함
+  event.returnValue = '';
+});
+```
