@@ -85,6 +85,22 @@ setState는 비동기로 동작한다.
 
 ## useEffect
 
+### clean up 정리
+
+useEffect return 값으로 함수를 넣어 주면 된다
+함수를 return 해주면 해당 컴포넌트가 언마운트 될때,
+다음 랜더링시 불릴 useEffect가 실행되기 이전에 return 으로 넣어준 함수가 실행 된다
+
+```
+useEffect(() => {
+  return () => {}
+}, [])
+```
+
+#### return 문에 콜백을 사용하는 이유는
+
+그냥 retrun 해주게 되면 mount 된 동시에 unmount도 같이 진행 된다
+
 ### addEventListner
 
 addEventListner를 통해 이벤트를 등록하고 난 뒤 이벤트 등록을 해제해주지 않으면, 특정 이벤트에서 계속해서 이벤트를 감지하기 때문에 성능 저하를 일으킬 수 있다
@@ -109,3 +125,13 @@ window.addEventListener('beforeunload', (event) => {
   event.returnValue = '';
 });
 ```
+
+### useBeforeLeave
+
+#### addEventListener 'mouseleave'
+
+```
+addEventListener('mouseleave', (event) => {});
+```
+
+마우스 커서를 핸들링 할 수 있다
