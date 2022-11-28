@@ -6,6 +6,7 @@ import useClick from "../hook/useClick";
 import useConfirm from "../hook/useConfirm";
 import usePreventLeave from "../hook/usePreventLeave";
 import useBeforeLeave from "../hook/useBeforeLeave";
+import useFadeIn from "../hook/useFadeIn";
 
 const HookTest = () => {
   const maxLen = (value) => value.length <= 10;
@@ -38,6 +39,9 @@ const HookTest = () => {
   const { enablePrevent, disablePrevent } = usePreventLeave();
   const beForLife = () => console.log("Please don't leave");
   useBeforeLeave(beForLife);
+
+  const fadeInH2 = useFadeIn(1, 1);
+  const fadeInP = useFadeIn(3, 3);
   return (
     <div>
       <h3>hook test</h3>
@@ -53,6 +57,9 @@ const HookTest = () => {
       <br />
       <button onClick={enablePrevent}>Protect</button>
       <button onClick={disablePrevent}>Unprotect</button>
+
+      <h1 {...fadeInH2}>hallo</h1>
+      <p {...fadeInP}>schen dich kennenzulernen</p>
     </div>
   );
 };
