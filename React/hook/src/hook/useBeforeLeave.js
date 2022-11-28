@@ -1,20 +1,23 @@
 import React, { useEffect } from 'react';
 
-const useBeforeLeave = () => {
-  const handleCursor = () => {
-    console.log('useBeforeLeave 작동 !')
+const useBeforeLeave = (onBefore) => {
+  if (typeof onBefore !== 'function') {
+    return
+  }
+  const handleCursor = (event) => {
+    // console.log('useBeforeLeave 작동 !', event)
+    // onBefore()
+    const { clientY } = event;
+    if (clientY <= 0) {
+      onBefore()
+    }
   }
   useEffect(() => {
-    document.addEventListener("mouseleave", handle)
+    document.addEventListener("mouseleave", handleCursor)
     return () => {
-      document.removeEventListener('mouseleave', handle)
+      document.removeEventListener('mouseleave', handleCursor)
     }
   }, [])
-  return (
-    <div>
-
-    </div>
-  );
 };
 
 export default useBeforeLeave;

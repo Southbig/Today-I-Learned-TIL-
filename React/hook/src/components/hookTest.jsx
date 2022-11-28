@@ -5,6 +5,7 @@ import useTitle from "../hook/useTitle";
 import useClick from "../hook/useClick";
 import useConfirm from "../hook/useConfirm";
 import usePreventLeave from "../hook/usePreventLeave";
+import useBeforeLeave from "../hook/useBeforeLeave";
 
 const HookTest = () => {
   const maxLen = (value) => value.length <= 10;
@@ -35,6 +36,8 @@ const HookTest = () => {
   const confirm = useConfirm("kann ich das ?", action, abord);
 
   const { enablePrevent, disablePrevent } = usePreventLeave();
+  const beForLife = () => console.log("Please don't leave");
+  useBeforeLeave(beForLife);
   return (
     <div>
       <h3>hook test</h3>
