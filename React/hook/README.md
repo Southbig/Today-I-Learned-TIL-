@@ -93,7 +93,10 @@ useEffect return 값으로 함수를 넣어 주면 된다
 
 ```
 useEffect(() => {
-  return () => {}
+  // mount 될 아이
+  return () => {
+    // unmount 될 아이
+  }
 }, [])
 ```
 
