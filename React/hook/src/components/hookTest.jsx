@@ -7,6 +7,7 @@ import useConfirm from "../hook/useConfirm";
 import usePreventLeave from "../hook/usePreventLeave";
 import useBeforeLeave from "../hook/useBeforeLeave";
 import useFadeIn from "../hook/useFadeIn";
+import useNetwork from "../hook/useNetwork";
 
 const HookTest = () => {
   const maxLen = (value) => value.length <= 10;
@@ -42,6 +43,12 @@ const HookTest = () => {
 
   const fadeInH2 = useFadeIn(1, 1);
   const fadeInP = useFadeIn(3, 3);
+
+  const handleNetworkChange = (onLine) => {
+    console.log(onLine ? "We just went online" : "We are offline");
+  };
+
+  const onLine = useNetwork(handleNetworkChange);
   return (
     <div>
       <h3>hook test</h3>
@@ -60,6 +67,7 @@ const HookTest = () => {
 
       <h1 {...fadeInH2}>hallo</h1>
       <p {...fadeInP}>schen dich kennenzulernen</p>
+      <h1>{onLine ? "jetzt online" : "jetzt offline"}</h1>
     </div>
   );
 };
