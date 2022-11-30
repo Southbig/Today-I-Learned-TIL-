@@ -9,6 +9,7 @@ import useBeforeLeave from "../hook/useBeforeLeave";
 import useFadeIn from "../hook/useFadeIn";
 import useNetwork from "../hook/useNetwork";
 import useScroll from "../hook/useScroll";
+import useFullscreen from "../hook/useFullscreen";
 
 const HookTest = () => {
   const maxLen = (value) => value.length <= 10;
@@ -52,6 +53,11 @@ const HookTest = () => {
   const onLine = useNetwork(handleNetworkChange);
 
   const { y } = useScroll();
+
+  const onFullMessage = (isFull) => {
+    console.log(isFull ? "We are full" : "We are small");
+  };
+  const { element, triggerFull, exitFull } = useFullscreen(onFullMessage);
   return (
     <div style={{ height: "1000vh" }}>
       <h3>hook test</h3>
@@ -75,6 +81,19 @@ const HookTest = () => {
       <h1 style={{ position: "fixed", color: y > 100 ? "red" : "blue" }}>
         useScroll
       </h1>
+
+      <div style={{ margin: "150px" }}>
+        <div>
+          <img
+            src="hallstadt.JPG"
+            alt=""
+            style={{ with: "200px", height: "200px" }}
+            ref={element}
+            onClick={exitFull}
+          />
+        </div>
+        <button onClick={triggerFull}>full screen</button>
+      </div>
     </div>
   );
 };
