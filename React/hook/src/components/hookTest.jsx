@@ -8,6 +8,7 @@ import usePreventLeave from "../hook/usePreventLeave";
 import useBeforeLeave from "../hook/useBeforeLeave";
 import useFadeIn from "../hook/useFadeIn";
 import useNetwork from "../hook/useNetwork";
+import useScroll from "../hook/useScroll";
 
 const HookTest = () => {
   const maxLen = (value) => value.length <= 10;
@@ -49,8 +50,10 @@ const HookTest = () => {
   };
 
   const onLine = useNetwork(handleNetworkChange);
+
+  const { y } = useScroll();
   return (
-    <div>
+    <div style={{ height: "1000vh" }}>
       <h3>hook test</h3>
       <input type="text" placeholder="hey ?" {...name} />
       <br />
@@ -68,6 +71,10 @@ const HookTest = () => {
       <h1 {...fadeInH2}>hallo</h1>
       <p {...fadeInP}>schen dich kennenzulernen</p>
       <h1>{onLine ? "jetzt online" : "jetzt offline"}</h1>
+
+      <h1 style={{ position: "fixed", color: y > 100 ? "red" : "blue" }}>
+        useScroll
+      </h1>
     </div>
   );
 };
