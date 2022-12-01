@@ -10,7 +10,7 @@ import useFadeIn from "../hook/useFadeIn";
 import useNetwork from "../hook/useNetwork";
 import useScroll from "../hook/useScroll";
 import useFullscreen from "../hook/useFullscreen";
-import useNotification from "../hook/useNotification";
+import triggerNotif from "../hook/useNotification";
 
 const HookTest = () => {
   const maxLen = (value) => value.length <= 10;
