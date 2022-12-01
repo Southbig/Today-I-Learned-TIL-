@@ -10,6 +10,7 @@ import useFadeIn from "../hook/useFadeIn";
 import useNetwork from "../hook/useNetwork";
 import useScroll from "../hook/useScroll";
 import useFullscreen from "../hook/useFullscreen";
+import useNotification from "../hook/useNotification";
 
 const HookTest = () => {
   const maxLen = (value) => value.length <= 10;
@@ -58,6 +59,9 @@ const HookTest = () => {
     console.log(isFull ? "We are full" : "We are small");
   };
   const { element, triggerFull, exitFull } = useFullscreen(onFullMessage);
+
+  const notification = useNotification();
+  console.log(notification);
   return (
     <div style={{ height: "1000vh" }}>
       <h3>hook test</h3>
