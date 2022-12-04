@@ -11,6 +11,7 @@ import useNetwork from "../hook/useNetwork";
 import useScroll from "../hook/useScroll";
 import useFullscreen from "../hook/useFullscreen";
 import triggerNotif from "../hook/useNotification";
+import useAxios from "../hook/useAxios";
 
 const HookTest = () => {
   const maxLen = (value) => value.length <= 10;
@@ -60,8 +61,14 @@ const HookTest = () => {
   };
   const { element, triggerFull, exitFull } = useFullscreen(onFullMessage);
 
-  const notification = useNotification();
-  console.log(notification);
+  const { loading, data, error, refetch } = useAxios({
+    url: "https://yts.mx/api/v2/list_movies.json",
+  });
+
+  console.log(
+    `loading: ${loading}\nerror: ${error}\ndata: ${JSON.stringify(data)}`
+  );
+
   return (
     <div style={{ height: "1000vh" }}>
       <h3>hook test</h3>
@@ -98,6 +105,10 @@ const HookTest = () => {
         </div>
         <button onClick={triggerFull}>full screen</button>
       </div>
+
+      <h1>{data && data.status}</h1>
+      <h2>{loading && "loading"}</h2>
+      <button onClick={refetch}>Refetch</button>
     </div>
   );
 };
