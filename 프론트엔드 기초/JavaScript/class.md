@@ -53,4 +53,4 @@ const tom = new UserClass("Tom", 19)
 
 > class는 proto type 내부에 showName이 존재
 
-<img src ="스크린샷 2022-12-15 오후 3.46.34.png">
+<img src ="https://velog.velcdn.com/images/southbig89/post/b7f09820-f535-463c-8329-46141ff10aca/image.png">
