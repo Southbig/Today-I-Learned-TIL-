@@ -55,3 +55,5 @@ z4 instanceof Bmw
 z4.constructor === Bmw
 -> true
 ```
+
+> 프로퍼티란 속성이란 뜻으로 자바스크립트에서 객체 내부의 속성을 의미한다
