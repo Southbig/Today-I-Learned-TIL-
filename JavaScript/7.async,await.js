@@ -1,4 +1,4 @@
-//asunc, await
+//async, await
 //promise를 좀더 간결하고 간편하게 그리고 동기적으로 실행되는 것처럼 보이게 만들어 주는 것
 
 // promise들은 chaining을 할 수있는데
